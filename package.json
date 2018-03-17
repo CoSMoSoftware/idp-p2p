@@ -1,0 +1,16 @@
+{
+  "name": "idp-p2p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "openssl req -sha256 -days 3650 -newkey rsa:1024 -nodes -new -x509 -keyout server.key -out server.cert -subj '/C=GB/ST=/L=/O=/OU=/CN=idp-p2p'",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "transaction-manager": "^2.1.0",
+    "websocket": "^1.0.25"
+  }
+}
